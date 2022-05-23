@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const question = 'What is your name?';
 
+function letAsk() {
  fs.appendFile(path.join(__dirname, 'text.txt'), '', () => { });
   process.stdout.write(question)
 }
@@ -24,4 +25,4 @@ process.on('SIGINT', () => {
   process.exit();
 });
 
-ask();
+letAsk();
